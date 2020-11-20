@@ -3,12 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dc65268360.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<div>this is a test</div>
+<div class="nav-wrapper">
+    <div class="nav">
+        <div class="logo">
+            <i class="fab fa-github "></i>
+        </div>
+        <div class="search-nav">
+           <div class="wrappers">
+               <input type="text" placeholder="Search or jump to">
+           </div>
+            <ul>
+                <li><a href="pull.asp">Pull request</a></li>
+                <li><a href="issues.asp">Issues</a></li>
+                <li><a href="marketplace.asp">Marketplace</a></li>
+                <li><a href="explore.asp">Explore</a></li>
+            </ul>
+        </div>
+        <div class="notification">
+            <i class="far fa-bell"></i>
+        </div>
+        <div class="notification">
+            <i class="fas fa-plus"></i>
+        </div>
+        <div class="notification">Icon</div>
+    </div>
+</div>
+<section class="tabs">
+    <div class="container">
+        <div id="tab-1" class="tab-item tab-border">
+            <i class="fas fa-book-open"></i>
+            <p class="hide-sm">Overview</p>
+        </div>
+        <div id="tab-2" class="tab-item">
+            <i class="fas fa-book "></i>
+            <p class="hide-sm keep">Repositories <span class="er">20</span></p>
+        </div>
+        <div id="tab-3" class="tab-item">
+            <i class="fas fa-tags "></i>
+            <p class="hide-sm">Projects</p>
+        </div>
+        <div id="tab-4" class="tab-item">
+            <i class="fas fa-dice-d6"></i>
+            <p class="hide-sm">Package</p>
+        </div>
+    </div>
+</section>
+<section class="content">
+    <section class="black">
+       <div class="sky">
+           <img src="https://avatars2.githubusercontent.com/u/49247838?s=460&u=e00e9d3840958f3bbfa7e3766ae6ed693107f345&v=4" alt="Avatar" class="avatar">
+           <div class="smile">
+               <i class="far fa-smile"></i>
+           </div>
+       </div>
+        <div class="user--details">
+            <div class="username">
+                <h2>Adebayo Muhammad</h2>
+                <p>Muhammadcod</p>
+            </div>
+            <div class="description">
+                <p>Frontend Developer</p>
+            </div>
+        </div>
+    </section>
+    <section class="tab-content blue">
+        <div class="container">
+            <!-- Tab Content 1 -->
+            <div id="tab-1-content" class="tab-content-item show">
+                <div class="tab-1-content-inner" >
+                    <ul id="">
+                        <!--<li class="item">
+                            <div class="item-wrapper"">
+                                <h6 class="title">Title</h6>
+                                <div class="item-details">
+                                    <div>a</div>
+                                    <div>b</div>
+                                    <div>c</div>
+                                </div>
+                            </div>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
 
-<script type="application/javascript">
+            <!-- Tab Content 2 -->
+            <div id="tab-2-content" class="tab-content-item">
+                <div class="tab-2-content-inner" >
+                    <div class="dropdown">
+                        <input type="text" placeholder="Find a repository">
+
+                    </div>
+                    <ul id="list-grid">
+                        <!--<li class="item">
+                            <div class="item-wrapper"">
+                                <h6 class="title">Title</h6>
+                                <div class="item-details">
+                                    <div>a</div>
+                                    <div>b</div>
+                                    <div>c</div>
+                                </div>
+                            </div>
+                        </li>-->
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Tab Content 3 -->
+            <div id="tab-3-content" class="tab-content-item">
+                hi
+            </div>
+        </div>
+    </section>
+</section>
+
+<script type="application/javascript" src="index.js">
+
 </script>
 </body>
 </html>
