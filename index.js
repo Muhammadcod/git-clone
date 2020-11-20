@@ -35,17 +35,20 @@ tabItems.forEach(item => {
 });
 
 const github_data = {
-    "token": "8b875b6ce5e1afee6017240bf602cb7341f4db06",
+    "token": "a601412f8143fe758a372e04e7df63e4dc6e4d73",
     "username": "Muhammadcod"
 };
 
 const query = `{
             user(login:"${github_data.username}" ){
+             name
+             avatarUrl
             repositories(first:20, orderBy: {field: CREATED_AT, direction: DESC }){
                 nodes{
                     id,
                     name,
                     updatedAt,
+                    isPrivate,
                     forkCount,
                     stargazerCount,
                     languages(first:10){
@@ -55,6 +58,8 @@ const query = `{
                         }
                     }
                  }
+                 name,
+             avatarUrl,
             }
 
 }`
@@ -92,6 +97,12 @@ const languages_icons = {
     Java: "logos-java",
 };
 
+const badge = document.getElementById("badge");
+function getLength(element) {
+   return badge.innerHTML = `${element}`;
+
+}
+
 fetch(baseUrl, {
     method: "POST",
     headers: headers,
@@ -119,8 +130,10 @@ fetch(baseUrl, {
         newRepo["data"].push(obj);
         }
 
+
     return newRepo.data.map(rep => {
         // console.log("Fetching the Pinned Projects Data.", rep);
+     let  length  = newRepo.data.length;
 
         let item = createNode('li'),
              div = createNode('div'),
@@ -145,7 +158,7 @@ fetch(baseUrl, {
 
 
          fork.innerHTML = `<i class="fas fa-code-branch" ></i> ${rep.forkCount}`;
-         update.innerHTML = `Updated ${rep.updatedAt} days ago`;
+         update.innerHTML = `Updated ${rep.updatedAt}`;
          lan.innerHTML = `<i class="fas fa-circle"  ></i> <span class="cover">${rep.languages[0] ? rep.languages[0].name : rep.languages}</span>` ;
         lan.style.color =  rep.languages[0] ? rep.languages[0].fontawesomeClass : rep.languages[1];
         lan.style.display = !rep.languages[0] ? "none" : "inline";
@@ -162,7 +175,7 @@ fetch(baseUrl, {
         append(div, button);
         append(item, div);
         append(ul, item);
-
+getLength(length)
         // emptySpan ? span.style.display = "none" : span.style.display = "inline"
     })
 

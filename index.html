@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Git Clone</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap" rel="stylesheet">
@@ -18,6 +18,8 @@
         <div class="search-nav">
            <div class="wrappers">
                <input type="text" placeholder="Search or jump to">
+               <span class="">/</span>
+
            </div>
             <ul>
                 <li><a href="pull.asp">Pull request</a></li>
@@ -26,13 +28,17 @@
                 <li><a href="explore.asp">Explore</a></li>
             </ul>
         </div>
-        <div class="notification">
+        <div class="notification small">
             <i class="far fa-bell"></i>
         </div>
-        <div class="notification">
+        <div class="notification small space">
             <i class="fas fa-plus"></i>
+            <i class="fas fa-sort-down"></i>
         </div>
-        <div class="notification">Icon</div>
+        <div class="notification small space">
+            <img src="https://avatars2.githubusercontent.com/u/49247838?s=460&u=e00e9d3840958f3bbfa7e3766ae6ed693107f345&v=4" alt="Avatar" class="avatar small">
+            <i class="fas fa-sort-down"></i>
+        </div>
     </div>
 </div>
 <section class="tabs">
@@ -43,7 +49,7 @@
         </div>
         <div id="tab-2" class="tab-item">
             <i class="fas fa-book "></i>
-            <p class="hide-sm keep">Repositories <span class="er">20</span></p>
+            <p class="hide-sm keep">Repositories <span id="badge"></span></p>
         </div>
         <div id="tab-3" class="tab-item">
             <i class="fas fa-tags "></i>
@@ -56,16 +62,20 @@
     </div>
 </section>
 <section class="content">
-    <section class="black">
+    <section class="side">
        <div class="sky">
            <img src="https://avatars2.githubusercontent.com/u/49247838?s=460&u=e00e9d3840958f3bbfa7e3766ae6ed693107f345&v=4" alt="Avatar" class="avatar">
-           <div class="smile">
-               <i class="far fa-smile"></i>
+           <div class="input-icons">
+               <i class="far fa-smile icon">
+               </i>
+               <input class="input-field"
+                      type="text"
+                      placeholder="Set status">
            </div>
        </div>
         <div class="user--details">
             <div class="username">
-                <h2>Adebayo Muhammad</h2>
+                <h2>Mohammed Adebayo</h2>
                 <p>Muhammadcod</p>
             </div>
             <div class="description">
@@ -73,23 +83,12 @@
             </div>
         </div>
     </section>
-    <section class="tab-content blue">
+    <section class="tab-content main">
         <div class="container">
             <!-- Tab Content 1 -->
             <div id="tab-1-content" class="tab-content-item show">
                 <div class="tab-1-content-inner" >
-                    <ul id="">
-                        <!--<li class="item">
-                            <div class="item-wrapper"">
-                                <h6 class="title">Title</h6>
-                                <div class="item-details">
-                                    <div>a</div>
-                                    <div>b</div>
-                                    <div>c</div>
-                                </div>
-                            </div>
-                        </li>-->
-                    </ul>
+                    <p>Click the next Tab</p>
                 </div>
             </div>
 
@@ -100,6 +99,10 @@
                         <input type="text" placeholder="Find a repository">
 
                     </div>
+                    <span class="dropdown inline">
+                        <h4>results for public repositories</h4>
+
+                    </span>
                     <ul id="list-grid">
                         <!--<li class="item">
                             <div class="item-wrapper"">
