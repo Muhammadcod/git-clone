@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="592559ab-48a1-454a-bea0-65b2ec05006a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,7 @@
       <workItem from="1605815009281" duration="16675000" />
       <workItem from="1605851765689" duration="42034000" />
       <workItem from="1605948341535" duration="5395000" />
-      <workItem from="1605957201783" duration="26370000" />
+      <workItem from="1605957201783" duration="27022000" />
     </task>
     <servers />
   </component>
@@ -131,11 +129,11 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768/1366.-304.1280.720@0.0.1366.768" timestamp="1605037880305" />
-    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1605989637685">
+    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1605995869500">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768/1366.-314.1920.1080@0.0.1366.768" timestamp="1605815104730" />
-    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1605989637685" />
+    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1605995869500" />
     <state x="184" y="29" key="SettingsEditor" timestamp="1605965976002">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
