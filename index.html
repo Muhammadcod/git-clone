@@ -5,22 +5,27 @@
     <title>Git Clone</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&family=Roboto+Condensed:wght@300;400&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/dc65268360.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <div class="nav-wrapper">
-    <div class="nav">
+    <nav class="navbar ">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
         <div class="logo">
             <i class="fab fa-github "></i>
         </div>
-        <div class="search-nav">
-           <div class="wrappers">
-               <input type="text" placeholder="Search or jump to">
-               <span class="">/</span>
 
-           </div>
+        <div class="main-nav search-nav" id="js-menu">
+            <div class="wrappers">
+                <input type="text" placeholder="Search or jump to">
+                <span class="">/</span>
+
+            </div>
             <ul>
                 <li><a href="pull.asp">Pull request</a></li>
                 <li><a href="issues.asp">Issues</a></li>
@@ -28,107 +33,124 @@
                 <li><a href="explore.asp">Explore</a></li>
             </ul>
         </div>
-        <div class="notification small">
+        <div class="notification small bell">
             <i class="far fa-bell"></i>
+            <span class="ping"></span>
         </div>
-        <div class="notification small space">
-            <i class="fas fa-plus"></i>
-            <i class="fas fa-sort-down"></i>
+        <div class="notification small fake">
+<!--            <i class="far fa-bell"></i>-->
         </div>
-        <div class="notification small space">
-            <img src="https://avatars2.githubusercontent.com/u/49247838?s=460&u=e00e9d3840958f3bbfa7e3766ae6ed693107f345&v=4" alt="Avatar" class="avatar small">
-            <i class="fas fa-sort-down"></i>
-        </div>
-    </div>
+            <div class="notification small main-nav space">
+                <i class="fas fa-plus"></i>
+                <i class="fas fa-sort-down"></i>
+            </div>
+            <div class="notification small main-nav space">
+                <img src="https://avatars2.githubusercontent.com/u/49247838?s=460&u=e00e9d3840958f3bbfa7e3766ae6ed693107f345&v=4" alt="Avatar" class="avatar small">
+                <i class="fas fa-sort-down"></i>
+            </div>
+    </nav>
 </div>
-<section class="tabs">
-    <div class="container">
-        <div id="tab-1" class="tab-item tab-border">
-            <i class="fas fa-book-open"></i>
-            <p class="hide-sm">Overview</p>
-        </div>
-        <div id="tab-2" class="tab-item">
-            <i class="fas fa-book "></i>
-            <p class="hide-sm keep">Repositories <span id="badge"></span></p>
-        </div>
-        <div id="tab-3" class="tab-item">
-            <i class="fas fa-tags "></i>
-            <p class="hide-sm">Projects</p>
-        </div>
-        <div id="tab-4" class="tab-item">
-            <i class="fas fa-dice-d6"></i>
-            <p class="hide-sm">Package</p>
-        </div>
-    </div>
-</section>
-<section class="content">
-    <section class="side">
-       <div class="sky">
-           <img src="https://avatars2.githubusercontent.com/u/49247838?s=460&u=e00e9d3840958f3bbfa7e3766ae6ed693107f345&v=4" alt="Avatar" class="avatar">
-           <div class="input-icons">
-               <i class="far fa-smile icon">
-               </i>
-               <input class="input-field"
-                      type="text"
-                      placeholder="Set status">
-           </div>
-       </div>
-        <div class="user--details">
-            <div class="username">
-                <h2>Mohammed Adebayo</h2>
-                <p>Muhammadcod</p>
-            </div>
-            <div class="description">
-                <p>Frontend Developer</p>
-            </div>
-        </div>
-    </section>
-    <section class="tab-content main">
-        <div class="container">
-            <!-- Tab Content 1 -->
-            <div id="tab-1-content" class="tab-content-item show">
-                <div class="tab-1-content-inner" >
-                    <p>Click the next Tab</p>
+
+<section class="haaa">
+    <section class="sideA side">
+        <section class="">
+            <div class="sky">
+                <img src="https://avatars2.githubusercontent.com/u/49247838?s=460&u=e00e9d3840958f3bbfa7e3766ae6ed693107f345&v=4" alt="Avatar" class="avatar">
+                <div class="username">
+                    <h2>Mohammed Adebayo</h2>
+                    <p>Muhammadcod</p>
+                </div>
+                <div class="input-icons">
+                    <i class="far fa-smile icon">
+                    </i>
+                    <input class="input-field"
+                           type="text"
+                           placeholder="Set status">
                 </div>
             </div>
+            <div class="user--details">
+                <div class="description">
+                    <p>Frontend Developer</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="sideB main">
+        <section class="tabs">
+            <div class="container">
+                <div id="tab-1" class="tab-item tab-border">
+                    <i class="fas fa-book-open"></i>
+                    <p class="hide-sm">Overview</p>
+                </div>
+                <div id="tab-2" class="tab-item">
+                    <i class="fas fa-book "></i>
+                    <p class="hide-sm keep">Repositories <span id="badge"></span></p>
+                </div>
+                <div id="tab-3" class="tab-item">
+                    <i class="fas fa-tags "></i>
+                    <p class="hide-sm">Projects</p>
+                </div>
+                <div id="tab-4" class="tab-item">
+                    <i class="fas fa-dice-d6"></i>
+                    <p class="hide-sm">Package</p>
+                </div>
+            </div>
+        </section>
+        <section class="content">
 
-            <!-- Tab Content 2 -->
-            <div id="tab-2-content" class="tab-content-item">
-                <div class="tab-2-content-inner" >
-                    <div class="dropdown">
-                        <input type="text" placeholder="Find a repository">
-
+            <section class="tab-content ">
+                <div class="container">
+                    <!-- Tab Content 1 -->
+                    <div id="tab-1-content" class="tab-content-item show">
+                        <div class="tab-1-content-inner" >
+                            <p>Click the next Tab</p>
+                        </div>
                     </div>
-                    <span class="dropdown inline">
+
+                    <!-- Tab Content 2 -->
+                    <div id="tab-2-content" class="tab-content-item">
+                        <div class="tab-2-content-inner" >
+                            <div class="dropdown">
+                                <input type="text" placeholder="Find a repository">
+
+                            </div>
+                            <span class="dropdown inline">
                         <h4>results for public repositories</h4>
 
                     </span>
-                    <ul id="list-grid">
-                        <!--<li class="item">
-                            <div class="item-wrapper"">
-                                <h6 class="title">Title</h6>
-                                <div class="item-details">
-                                    <div>a</div>
-                                    <div>b</div>
-                                    <div>c</div>
-                                </div>
-                            </div>
-                        </li>-->
-                    </ul>
+                            <ul id="list-grid">
+                                <!--<li class="item">
+                                    <div class="item-wrapper"">
+                                        <h6 class="title">Title</h6>
+                                        <div class="item-details">
+                                            <div>a</div>
+                                            <div>b</div>
+                                            <div>c</div>
+                                        </div>
+                                    </div>
+                                </li>-->
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- Tab Content 3 -->
+                    <div id="tab-3-content" class="tab-content-item">
+                        hi
+                    </div>
                 </div>
-
-            </div>
-
-            <!-- Tab Content 3 -->
-            <div id="tab-3-content" class="tab-content-item">
-                hi
-            </div>
-        </div>
+            </section>
+        </section>
     </section>
 </section>
 
 <script type="application/javascript" src="index.js">
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
 
+    navBarToggle.addEventListener('click', function () {
+        mainNav.classList.toggle('active');
+    });
 </script>
 </body>
 </html>

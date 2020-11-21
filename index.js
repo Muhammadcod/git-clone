@@ -22,6 +22,9 @@ function removeBorder() {
     });
 }
 
+
+
+
 // Remove show class from all content items
 function removeShow() {
     tabContentItems.forEach(item => {
@@ -35,7 +38,7 @@ tabItems.forEach(item => {
 });
 
 const github_data = {
-    "token": "a601412f8143fe758a372e04e7df63e4dc6e4d73",
+    "token": " 6dda022751851e28c3581f69ddbfb3e9d9f85398",
     "username": "Muhammadcod"
 };
 
@@ -49,6 +52,7 @@ const query = `{
                     name,
                     updatedAt,
                     isPrivate,
+                    description,
                     forkCount,
                     stargazerCount,
                     languages(first:10){
@@ -133,50 +137,55 @@ fetch(baseUrl, {
 
     return newRepo.data.map(rep => {
         // console.log("Fetching the Pinned Projects Data.", rep);
-     let  length  = newRepo.data.length;
-
+        let  length  = newRepo.data.length;
+        const date1 = new Date(`${rep.updatedAt}`).toString();
         let item = createNode('li'),
              div = createNode('div'),
+             descriptionWrapper = createNode('div'),
              detail = createNode('div'),
              header = createNode('h6'),
              star = createNode('span'),
              button = createNode('span'),
              fork = createNode('span'),
              update = createNode('span'),
-             link = createNode('a'),
+             description = createNode('p'),
              lan = createNode('span'),
              detailWrap = createNode('div')
 
-         header.classList.add("title");
-         header.innerHTML = `<a href="">${rep.name}</a>   `;
-         div.classList.add("item-wrapper");
-         detail.classList.add("item-details");
-         item.classList.add("item");
-        button.innerHTML = `<i class="far fa-star"></i> star`;
+        header.classList.add("title");
+        div.classList.add("item-wrapper");
+        detail.classList.add("item-details");
+        item.classList.add("item");
         button.classList.add("button")
+        description.classList.add("description")
+        header.innerHTML = `<a href="">${rep.name}</a>`;
+        description.innerHTML = `${rep.description !== null ? rep.description : false }`;
+        button.innerHTML = `<i class="far fa-star"></i> star`;
         star.innerHTML = `<i class="far fa-star"></i> ${rep.stargazerCount}`;
-
-
-         fork.innerHTML = `<i class="fas fa-code-branch" ></i> ${rep.forkCount}`;
-         update.innerHTML = `Updated ${rep.updatedAt}`;
-         lan.innerHTML = `<i class="fas fa-circle"  ></i> <span class="cover">${rep.languages[0] ? rep.languages[0].name : rep.languages}</span>` ;
+        fork.innerHTML = `<i class="fas fa-code-branch" ></i> ${rep.forkCount}`;
+        update.innerHTML = `Updated ${date1}`;
+        lan.innerHTML = `<i class="fas fa-circle"  ></i> <span class="cover">${rep.languages[0] ? rep.languages[0].name : rep.languages}</span>` ;
         lan.style.color =  rep.languages[0] ? rep.languages[0].fontawesomeClass : rep.languages[1];
         lan.style.display = !rep.languages[0] ? "none" : "inline";
         star.style.display = rep.stargazerCount === 0 ? "none" : "inline";
         fork.style.display = rep.forkCount === 0 ? "none" : "inline";
+        description.style.display = rep.description === null ? "none" : "inline-block";
         console.log(rep)
+
         append(detail, lan);
         append(detail,  star);
         append(detail,  fork);
         append(detail, update);
+        append(descriptionWrapper, description);
         append(detailWrap, header);
+        append(detailWrap, descriptionWrapper);
         append(detailWrap, detail);
         append(div, detailWrap);
         append(div, button);
         append(item, div);
         append(ul, item);
-getLength(length)
-        // emptySpan ? span.style.display = "none" : span.style.display = "inline"
+
+        getLength(length)
     })
 
 }).catch(error => console.error(error));
