@@ -1,6 +1,5 @@
 const tabItems = document.querySelectorAll('.tab-item');
 const tabContentItems = document.querySelectorAll('.tab-content-item');
-const spanish = document.querySelectorAll('p.keep');
 
 // Select tab content item
 function selectItem(e) {
@@ -38,7 +37,7 @@ tabItems.forEach(item => {
 });
 
 const github_data = {
-    "token": " 6dda022751851e28c3581f69ddbfb3e9d9f85398",
+    "token": "fdd6b30359cff7c76d47vyaxlamx6e197788964e",
     "username": "Muhammadcod"
 };
 
@@ -52,6 +51,7 @@ const query = `{
                     name,
                     updatedAt,
                     isPrivate,
+                    url,
                     description,
                     forkCount,
                     stargazerCount,
@@ -158,7 +158,7 @@ fetch(baseUrl, {
         item.classList.add("item");
         button.classList.add("button")
         description.classList.add("description")
-        header.innerHTML = `<a href="">${rep.name}</a>`;
+        header.innerHTML = `<a href="${rep.url}">${rep.name}</a>`;
         description.innerHTML = `${rep.description !== null ? rep.description : false }`;
         button.innerHTML = `<i class="far fa-star"></i> star`;
         star.innerHTML = `<i class="far fa-star"></i> ${rep.stargazerCount}`;

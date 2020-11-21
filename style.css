@@ -60,6 +60,10 @@ div.nav-wrapper {
         flex-direction: row-reverse;
     }
 
+    .input-icons {
+        width: 100%;
+
+    }
     .navbar .logo i {
         font-size: 30px;
     }
@@ -469,7 +473,6 @@ div.nav-wrapper {
     padding: 0 5px;
 }
 .input-icons {
-    width: 100%;
     position: relative;
     margin-top: 20px;
 }
